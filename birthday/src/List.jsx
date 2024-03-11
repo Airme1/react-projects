@@ -1,15 +1,22 @@
+import React from "react";
+
 export default function List({ people }) {
-    people.map((person) => {
-        const {id, name, age, image } = person;
-    })
-    
+
     return (
         <>
-            <img src={image} alt={name} />
-            <div className="contact">
-                <h1>{name}</h1>
-                <p>{age}</p>
-            </div>
+        {people.map((person) => {
+            const {id, name, age, image} = person;
+
+            return(
+            <article key={id} className="person">
+                <img src={image} alt={name} />
+                <div>
+                    <h4>{name}</h4>
+                    <p>{age} years</p>
+                </div>
+            </article>
+            )
+        })}
         </>
-    )
+    );
 }
