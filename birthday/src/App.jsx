@@ -7,7 +7,7 @@ export default function App() {
   return (
     <main>
       <section className="container">
-        <h1>{person.length} Birthdays today</h1>
+        <h3>{person.length} Birthdays today</h3>
         <List people={person} />
         <button onClick={ () => setPerson([])}>Clear All</button>
       </section>
